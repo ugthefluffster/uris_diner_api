@@ -53,5 +53,6 @@ class Dish(db.Model):
             "price": str(self.price),
             "image_src": self.image_src,
             "is_gluten_free": self.is_gluten_free,
-            "is_vegeterian": self.is_vegeterian
+            "is_vegeterian": self.is_vegeterian,
+            "description": self.description
         }
