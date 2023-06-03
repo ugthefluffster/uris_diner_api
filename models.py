@@ -46,7 +46,6 @@ class Dish(db.Model):
         return get_image_src(self)
 
     def serialize(self):
-        print(type(self.price))
         return {
             "id": self.id,
             "name": self.name,
