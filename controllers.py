@@ -12,6 +12,6 @@ class CategoryAll(Resource):
 class CategoryOne(Resource):
     def get(self):
         category = Category.query.get(request.args.get('category_id'))
-        if category is None:
+        if category is None or category.is_deleted:
            return {"message" : "dishes not found"}, 404
         return [dish.serialize() for dish in category.dishes if dish.is_deleted == False]
