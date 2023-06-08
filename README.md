@@ -8,6 +8,9 @@ A Flask backend server for [uris-diner-digital-menu](https://github.com/ugtheflu
 - ORM provided by [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/), connects to a PostgreSQL database on Azure
 
 ## Making queries:  
+
+URL: https://uris-diner-api.wittywave-70237434.germanywestcentral.azurecontainerapps.io/
+
 Fetching a list of all categories
 > /categories
 
