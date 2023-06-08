@@ -11,7 +11,7 @@ A Flask backend server for [uris-diner-digital-menu](https://github.com/ugtheflu
 Fetching a list of all categories
 > /categories
 
-```json
+```
 [
   {
     "id": <int:category.id>,
@@ -24,7 +24,7 @@ Fetching a list of all categories
 Fetching a list of all the dishes of a single category
 > /dishes?category_id=\<int>
 
-```json
+```
 [
   {
     "id": <int:dish.id>,
