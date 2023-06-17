@@ -4,10 +4,14 @@ from flask_cors import CORS
 from config import *
 from db import db
 from controllers import *
+from dotenv import load_dotenv, find_dotenv
+import os
+
+load_dotenv(find_dotenv())
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql+psycopg2://{DB_USER}:{DB_PASS}@{DB_HOST}/postgres'
-app.config['SECRET_KEY'] = '345345456456754greg45g4rb546y45tg3rtg4657y'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql+psycopg2://{os.environ["DB_USER"]}:{os.environ["DB_PASS"]}@{DB_HOST}/postgres'
+app.config['SECRET_KEY'] = os.environ["SECRET_KEY"]
 db.init_app(app)
 api = Api(app)
 CORS(app)
